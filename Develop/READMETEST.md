@@ -1,13 +1,10 @@
-
-// generate markdown function
-function generateMarkdown(data) {
-  return `# <${data.title}>
+# <test>
   ## Description
 
-  ${data.description}
+  test
   
-        FIX so license gets proper link
-  [![license](https://img.shields.io/badge/license-${data.license}-blue)](https://shields.io)
+
+  [![license](https://img.shields.io/badge/license-Boost Software License 1.0-blue)](https://shields.io)
   
   ## Table of Contents 
   
@@ -23,13 +20,13 @@ function generateMarkdown(data) {
   
   
   ## Installation
-  ${data.installation}
+  test
   
   ## Usage
-  ${data.instructions}
+  test
 
   ## License
-  ${data.license}
+  Boost Software License 1.0
 
 
   ---
@@ -43,23 +40,20 @@ function generateMarkdown(data) {
   
 
   ## Contribution
-  ${data.contribution}
+  tes
 
   ## Testing
-  ${data.testing}  
+  test  
 
   ## Questions
-  Github Profile: www.github.com/${data.username}
-  Email: ${data.email}
+  Github Profile: www.github.com/test
+  Email: test
 
-  ${data.questions}
+  test
   
   ## Credits
   List of collaborators, if any, with links to their GitHub profiles. Or links to resources used
   
-  ${data.credits}
+  test
 
-  `
-};
-module.exports = generateMarkdown;
-
+  

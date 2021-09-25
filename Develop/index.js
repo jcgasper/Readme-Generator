@@ -1,9 +1,8 @@
 // require const's
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown");
 
-const generateMarkdown = require(".src/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of user questions 
 const questions = [
@@ -51,7 +50,7 @@ const questions = [
 { 
     type: 'input',
     name: 'instructions',
-    message: 'Please provide instructions on how to use your program',
+    message: 'Please provide instructions on how to use your program (pictures/gifs can be added to this section)',
     validate: input => {
         if (input) {
             return true;
@@ -70,6 +69,14 @@ const questions = [
     
 
 },
+
+{ 
+    type: 'input',
+    name: 'credits',
+    message: 'Please enter Github profiles/names of any collaborators, or provide links to resources used (if applicable)',
+    
+
+},
 //testing prompt
 {
     type: 'input',
@@ -84,10 +91,11 @@ const questions = [
     type: 'checkbox',
     name: 'license',
     message: 'Please choose a license.',
-    choices: ['GNU AGPLv3', 'GNU GPLv3',
+    choices: ['Apache License 2.0','Boost Software License 1.0',
+        'GNU AGPLv3', 'GNU GPLv3',
       'GNU LGPLv3', 'Mozilla Public License 2.0',
-      'Apache License 2.0', 'MIT License', 'Boost Software License 1.0',
-      'The Unlicense'],
+       'MIT License', 
+      'The Unlicense', 'NO LICENSE'],
     validate: nameInput => {
       if (nameInput) {
         return true;
@@ -129,7 +137,7 @@ const questions = [
   {
     type: 'input',
     name: 'questions',
-    message: 'Please list enter contact information',
+    message: 'Please list enter any additional contact information',
     validate: (nameInput) => {
       if (nameInput) {
         return true;
@@ -141,10 +149,23 @@ const questions = [
   }];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName,data,(err) => {
+        if (err)
+        throw err;
+        console.log("readme written");
+    });
+}
 
-// TODO: Create a function to initialize app
-function init() {}
+// init function
+function init() {
+    inquirer.prompt(questions)
+    .then(function (input) {
+        console.log(input);
+        //rename to just readme once working as intended
+        writeToFile('READMETEST.md',generateMarkdown(input));
+    });
+}
 
 // Function call to initialize app
 init();
