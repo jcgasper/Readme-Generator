@@ -1,6 +1,74 @@
+function renderLicenseBadge(license) {
+  
+
+  let link = '[![license](https://img.shields.io/badge/license-${data.license}-blue)](https://shields.io)'
+
+}
+
+
+
+
+
+
+
+// TODO: Create a function that returns the license link
+
+function renderLicenseLink(licenseInput) {
+  
+  let licenseLink = '';
+  //if conditional to give the license the correct link
+  
+  if (licenseInput == 'Apache License 2.0') {
+     licenseLink = 'https://choosealicense.com/licenses/apache-2.0/';
+  }
+  
+  else if (licenseInput == 'Boost Software License 1.0') {
+    licenseLink = 'https://choosealicense.com/licenses/bsl-1.0/';
+  }
+
+  else if (licenseInput == 'GNU AGPLv3') {
+   licenseLink = 'https://choosealicense.com/licenses/agpl-3.0/';
+  }
+  else if (licenseInput == 'GNU GPLv3') {
+    licenseLink = 'https://choosealicense.com/licenses/gpl-3.0/';
+  }
+  else if (licenseInput == 'GNU LGPLv3') {
+     licenseLink = 'https://choosealicense.com/licenses/lgpl-3.0/';
+  }
+  else if (licenseInput == 'Mozilla Public License 2.0') {
+     licenseLink = 'https://choosealicense.com/licenses/mpl-2.0/';
+  }
+  
+  else if (licenseInput == 'MIT License') {
+     licenseLink = 'https://choosealicense.com/licenses/mit/';
+  }
+  
+  
+  else if (licenseInput == 'The Unlicense') {
+    licenseLink = 'https://choosealicense.com/licenses/unlicense/';
+  }
+
+  else if (licenseInput== 'NO LICENSE') {
+   licenseLink = '';
+  
+  }
+  
+return licenseLink;
+}
+
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {}
 
 // generate markdown function
+
+
+
 function generateMarkdown(data) {
+  
+  let licenseLink = renderLicenseLink(data.license);
+  //console.log("link test " + LicenseLink );
   return `# <${data.title}>
   ## Description
 
@@ -30,6 +98,8 @@ function generateMarkdown(data) {
 
   ## License
   ${data.license}
+
+  ${licenseLink}
 
 
   ---

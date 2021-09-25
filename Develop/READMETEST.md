@@ -3,8 +3,8 @@
 
   test
   
-
-  [![license](https://img.shields.io/badge/license-Boost Software License 1.0-blue)](https://shields.io)
+        FIX so license gets proper link
+  [![license](https://img.shields.io/badge/license-Apache License 2.0-blue)](https://shields.io)
   
   ## Table of Contents 
   
@@ -20,13 +20,15 @@
   
   
   ## Installation
-  test
+  tset
   
   ## Usage
-  test
+  tset
 
   ## License
-  Boost Software License 1.0
+  Apache License 2.0
+
+  https://choosealicense.com/licenses/apache-2.0/
 
 
   ---
@@ -40,16 +42,16 @@
   
 
   ## Contribution
-  tes
+  test
 
   ## Testing
   test  
 
   ## Questions
   Github Profile: www.github.com/test
-  Email: test
+  Email: tes
 
-  test
+  ttest
   
   ## Credits
   List of collaborators, if any, with links to their GitHub profiles. Or links to resources used
