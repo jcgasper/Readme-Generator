@@ -92,10 +92,8 @@ const questions = [
     name: 'license',
     message: 'Please choose a license.',
     choices: ['Apache License 2.0','Boost Software License 1.0',
-        'GNU AGPLv3', 'GNU GPLv3',
-      'GNU LGPLv3', 'Mozilla Public License 2.0',
-       'MIT License', 
-      'The Unlicense', 'NO LICENSE'],
+        'GNU AGPLv3', 'Mozilla Public License 2.0',
+       'MIT License', 'NO LICENSE'],
     validate: nameInput => {
       if (nameInput) {
         return true;
@@ -163,7 +161,7 @@ function init() {
     .then(function (input) {
         console.log(input);
         //rename to just readme once working as intended
-        writeToFile('READMETEST.md',generateMarkdown(input));
+        writeToFile('README.md',generateMarkdown(input));
     });
 }
 
