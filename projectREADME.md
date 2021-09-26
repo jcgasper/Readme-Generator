@@ -54,7 +54,7 @@
   Jacob Gasper
 
   [Github Repo](https://github.com/jcgasper/Readme-Generator "Github Repo")
-  ![Screenshot](img\reademescreenshot.png "Screenshot")
+  ![Screenshot](img/reademescreenshot.png "Screenshot")
 
   [Video Walkthrough](https://drive.google.com/file/d/1o9IlN-_vgdVahuA1Yug1mf1I02zIcttb/view "Video walkthrough");
 
